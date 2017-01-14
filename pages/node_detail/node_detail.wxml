@@ -1,0 +1,16 @@
+<!--pages/node_detail/node_detail.wxml-->
+<scroll-view scroll-y>
+    <view class="nDetailContainer">
+        <block wx:for="{{nodesDetail}}">
+            <view class="nDetailInfo" bindtap="intentToDetail" id="{{item.id}}">
+                <image src="https:{{item.member.avatar_normal}}" class="nDetailAvatar"></image>
+                <view class="info">
+                    <text class="nDetailUserName">{{item.member.username}}</text>
+                    <text class="nDetailReplies">{{item.replies}}个回复</text>
+                </view>
+                <view class="nDetailContent">{{item.content}}</view>
+            </view>
+        </block>
+    </view>
+    <loading hidden="{{hideLoading}}">加载中...</loading>
+</scroll-view>

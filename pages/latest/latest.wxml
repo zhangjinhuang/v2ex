@@ -1,0 +1,10 @@
+<!--pages/latest/latest.wxml-->
+<import src="../template/template.wxml"/>
+
+<scroll-view scroll-y="true" bindscrolltolower="loadMore" lower-threshold="100" style="height:{{windowHeight}}px;">
+  <block wx:for="{{datas}}">
+    <template is="hotsItem" data="{{item}}"/>
+  </block>
+  <view style="text-align:center;margin:10px;color:#ccc;" hidden="{{hideLoadMore}}">没有更多啦...</view>
+  <loading hidden="{{hideLoading}}">加载中...</loading>
+</scroll-view>

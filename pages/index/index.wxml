@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<import src="../template/template.wxml"/>
+
+<scroll-view scroll-y="true" bindscrolltolower="loadMore" lower-threshold="100" style="height:{{windowHeight}}px;">
+  <view hidden="{{hideRefresh}}" style="text-align:center;margin-top:10px;">
+    <image src="../../images/loading.gif" style="width:26px;height:26px;"></image>
+    <text class="refresh">刷新中...</text>
+  </view>
+  <block wx:for="{{datas}}">
+    <template is="hotsItem" data="{{item}}"/>
+  </block>
+  <view style="text-align:center;margin:10px;color:#ccc;" hidden="{{hideLoadMore}}">没有更多啦...</view>
+  <loading hidden="{{hideLoading}}">加载中...</loading>
+</scroll-view>

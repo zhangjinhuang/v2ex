@@ -1,0 +1,62 @@
+/* pages/detail/detail.wxss */
+.divider{
+    background-color: #ccc;
+    height: 2rpx;
+    width: calc(100% - 40rpx);
+    margin: 0 auto;
+}
+.themeDetail{
+    margin: 30rpx;
+    word-wrap: break-word;
+}
+
+/*回复*/
+.reply{
+    margin: 30rpx;
+    border: 1px solid #ccc;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    position: relative;
+}
+.reply .reply_userInfo .reply_avatar{
+    width:82rpx;
+    height: 82rpx;
+}
+/*.reply .reply_userName{
+    vertical-align: top;
+    height: 82rpx;
+    display: inline-block;
+    margin-left: 20rpx;
+    font-size: 36rpx;
+}*/
+.reply_info{
+    vertical-align: top;
+    height: 82rpx;
+    display: inline-block;
+    margin-left: 20rpx;
+    font-size: 36rpx;
+}
+.reply .reply_userName{
+    display: block;
+    vertical-align: top;
+    padding: 0;
+    margin-bottom: 6rpx;
+}
+.reply .content{
+    margin-top: 20rpx;
+    word-wrap: break-word;
+}
+.reply .replyFloor{
+    vertical-align: top;
+    height: 82rpx;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 82rpx;
+    position: absolute;
+    right: 50rpx;
+}
+.reply .time{
+    font-size: 30rpx;
+    padding: 0;
+    margin: 0;
+}

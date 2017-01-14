@@ -1,0 +1,35 @@
+<!--pages/detail/detail.wxml-->
+<import src="../template/template.wxml"/>
+
+<scroll-view scroll-y style="height:{{windowHeight}px;}" class="container">
+    <view class="header">
+        <view class="userInfo">
+            <image src="https:{{datas.member.avatar_normal}}" class="avatar" catchtap="intent2Member" data-name="{{datas.member.username}}"></image>
+            <text class="userName">{{datas.member.username}}</text>
+        </view>
+        <view class="title">{{datas.title}}</view>
+        <view class="otherInfo">
+            <text class="replay">{{datas.replies}} 次回复</text>
+            <text class="nodeName" catchtap="intent2Node" id="{{datas.node.id}}" data-name="{{datas.node.name}}">{{datas.node.name}}</text>
+        </view>
+        <!--<block wx:for="{{datas}}">
+        <template is="hotsItem" data="{{item}}"/>
+        </block>-->
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="themeDetail">
+        <!--<text class="title">{{datas.title}}</text>-->
+        <text class="content">{{datas.content}}</text>
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="replies">
+        <block wx:for="{{replies}}">
+            <template is="replyItem" data="{{item,index}}"/>
+        </block>
+    </view>
+    <loading hidden="{{hideLoading}}">加载中...</loading>
+</scroll-view>

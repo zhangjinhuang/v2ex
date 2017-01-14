@@ -1,0 +1,30 @@
+
+<template name="hotsItem">
+    <view class="hotsItem" bindtap="intentToDetail" id="{{item.id}}">
+        <view class="userInfo">
+            <image src="https:{{item.member.avatar_normal}}" class="avatar" catchtap="intent2Member" data-name="{{item.member.username}}"></image>
+            <text class="userName">{{item.member.username}}</text>
+        </view>
+        <view class="title">{{item.title}}</view>
+        <view class="otherInfo">
+            <text class="replay">{{item.replies}} 次回复</text>
+            <text class="nodeName" catchtap="intent2Node" id="{{item.node.id}}" data-value="{{item.node.name}}">{{item.node.name}}</text>
+        </view>
+        <view class="divider"></view>
+    </view>
+</template>
+
+<!--主题详情-回复模板-->
+<template name="replyItem">
+    <view class="reply">
+        <view class="reply_userInfo">
+            <image src="https:{{item.member.avatar_normal}}" class="reply_avatar" data-name="{{item.member.username}}" catchtap="intent2Member"></image>
+            <view class="reply_info">
+                <text class="reply_userName">{{item.member.username}}</text>
+                <text class="time">{{item.created}}</text>
+            </view>
+            <text class="replyFloor">{{index+1}}楼</text>
+        </view>
+        <view class="content">{{item.content}}</view>
+    </view>
+</template>

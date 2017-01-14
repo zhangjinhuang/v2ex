@@ -1,0 +1,49 @@
+/**app.wxss**/
+.hotsItem{
+  margin-bottom: 40rpx;
+  clear: both;
+}
+.userInfo{
+  height: 82rpx;
+  margin: 20rpx;
+}
+.avatar{
+  width: 82rpx;
+  height: 82rpx;
+}
+.userName{
+  margin-left: 20rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.title,.otherInfo{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.otherInfo{
+  margin-bottom: 80rpx;
+  font-size: 30rpx;
+  background: red;
+  color: #ccc;
+}
+.replay{
+  float:left;
+}
+.nodeName{
+  float: right;
+  border: 1rpx solid #ccc;
+  padding: 5rpx 10rpx;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  margin-bottom: 15rpx;
+}
+.divider{
+  width: 100%;
+  height: 20rpx;
+  clear: both;
+  background-color: #EFEEF3;
+}

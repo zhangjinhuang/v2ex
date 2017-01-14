@@ -1,0 +1,16 @@
+<!--pages/member/member.wxml-->
+<scroll-view scroll-y>
+    <view class="nMemberContainer">
+        <block wx:for="{{membersDetail}}">
+            <view class="nMemberInfo" bindtap="intentToDetail" id="{{item.id}}">
+                <image src="https:{{item.member.avatar_normal}}" class="nMemberAvatar"></image>
+                <view class="info">
+                    <text class="nMemberUserName">{{item.member.username}}</text>
+                    <text class="nMemberReplies">{{item.replies}}个回复</text>
+                </view>
+                <view class="nMemberContent">{{item.title}}</view>
+            </view>
+        </block>
+    </view>
+    <loading hidden="{{hideLoading}}">加载中...</loading>
+</scroll-view>

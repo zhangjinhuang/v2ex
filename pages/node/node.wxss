@@ -1,0 +1,8 @@
+/* pages/node/node.wxss */
+.node{
+    border: 1rpx solid #ccc;
+    display: inline-block;
+    margin: 15rpx;
+    padding: 10rpx;
+    font-size: 30rpx;
+}
